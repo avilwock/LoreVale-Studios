@@ -25,6 +25,7 @@ body {
     #171624
 );
 
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,6 +41,10 @@ box-shadow:
     0 0 0 2px #5E627D,
     0 0 0 4px #252338,
     0 3px 8px rgba(0,0,0,0.35);
+}
+
+.logo {
+    margin-left: 80px;
 }
 
 .buttons {
@@ -65,4 +70,3 @@ box-shadow:
 .button:click {
     color: var(--primary)
 }
-

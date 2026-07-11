@@ -1,11 +1,13 @@
 import styles from "./LoreValeMark.module.css"
 
-function Brand () {
-    <div className={styles.logo}>
-        LoreVale 
-        <hr></hr>
-        Studios
-    </div>
+function LoreValeMark({ size = "", className = "" }) {
+    return (
+        <div className={`${styles.logo} ${styles[size]} ${className}`}>
+            <span>LoreVale</span>
+            <span className={styles.divider}></span>
+            <span>Studios</span>
+        </div>
+    )
 }
 
-export default Brand
+export default LoreValeMark
