@@ -16,19 +16,30 @@ body {
     position: relative;
     z-index: 2;
     border-radius: 8px;
-    background-color: var(--surface);
+    background: linear-gradient(
+    120deg,
+    #171624,
+    #252338,
+    #5E627D,
+    #252338,
+    #171624
+);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    padding: 1.5rem 2rem;
+
+    padding: 1rem;
     margin-top: 15px;
+    margin-bottom: 15px;
 
-    border: 3px solid #151421;
+    border: 3px solid #171624;
 
-    box-shadow:
-        0 0 0 3px #4B506F,
-        0 8px 15px rgba(0,0,0,0.35);
+box-shadow:
+    0 0 0 2px #5E627D,
+    0 0 0 4px #252338,
+    0 3px 8px rgba(0,0,0,0.35);
 }
 
 .buttons {
@@ -39,7 +50,7 @@ body {
 
 .button {
     background-color: var(--button);
-    color: var(--text);
+    color: var(--primary);
     padding: 0.75rem 1.5rem;
     margin: .25rem;
     border-radius: 9px;
@@ -51,11 +62,7 @@ body {
     opacity: 0.8;
 }
 
-.logo {
-    color: var(--primary);
-    font-family: "Tangerine", cursive;
-    font-weight:400;
-    font-size: 60px;
-    /* color: slateblue; */
-    margin-left: 80px;
+.button:click {
+    color: var(--primary)
 }
+

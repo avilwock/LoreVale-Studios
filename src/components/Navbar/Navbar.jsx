@@ -11,12 +11,7 @@ function Navbar() {
 
     return (
         <nav className={styles.navbar}>
-            <div className={styles.logo}>
-                LoreVale 
-                <hr></hr>Studios
-            </div>
-
-            <div className={styles.buttons}>
+                        <div className={styles.buttons}>
                 {links.map((link) => (
                     <a 
                     key={link.name}
