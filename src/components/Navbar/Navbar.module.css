@@ -70,3 +70,77 @@ box-shadow:
 .button:click {
     color: var(--primary)
 }
+
+.navContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.announcement h2 {
+  margin-top: 16px;
+  color: var(--bg);
+  font-family: "Tangerine", cursive;
+  font-size: 36px;
+  font-weight: 300;
+  animation: announcement-fade 500ms ease;
+}
+
+.announcementDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0px;
+}
+
+.announcementDots button {
+    appearance: none;
+    box-sizing: border-box;
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    min-height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #9293A8;
+    cursor: pointer;
+    flex: 0 0 8px;
+    transition: background 200ms ease;
+}
+
+.announcementDots button.active {
+    width: 24px;
+    height: 8px;
+    flex: 0 0 24px;
+    border-radius: 10px;
+    background: var(--bg);
+}
+
+.announcementDots button:focus-visible {
+  outline: 2px solid var(--bg);
+  outline-offset: 4px;
+}
+
+@keyframes announcement-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement h2 {
+    animation: none;
+  }
+
+  .announcementDots button {
+    transition: none;
+  }
+}
