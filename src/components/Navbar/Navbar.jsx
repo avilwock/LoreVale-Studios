@@ -15,8 +15,8 @@ function Navbar() {
     
     const links = [
         {name: "Home", path: "/"},
-        {name: "Projects", path: "/projects"},
-        {name: "Writing", path: "/writing"},
+        {name: "Authors", path: "/authors"},
+        {name: "Shop", path: "/shop"},
         {name: "About", path: "/about"},
         {name: "Contacts", path: "/contact"}
     ];

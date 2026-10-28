@@ -2,8 +2,8 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
-import Writing from "./pages/Writing/Writing";
-import Projects from "./pages/Projects/Projects";
+import Shop from "./pages/Shop/Shop";
+import Authors from "./pages/Authors/Authors";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -17,8 +17,8 @@ function App() {
         <main className="page-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/writing" element={<Writing />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/authors" element={<Authors />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

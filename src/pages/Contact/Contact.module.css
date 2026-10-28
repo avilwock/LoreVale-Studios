@@ -1,0 +1,36 @@
+.contactTitle {
+    font-size: 72px;
+    margin-top: 30px;
+    font-family: "Tangerine", cursive;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-content: center;
+    justify-self: center;
+}
+
+button {
+    width: 20%;
+    align-self: center;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 35px;
+    
+}
+
+input {
+    margin: 8px 0;
+    border-radius: 6px;
+    height: 30px;
+    font-size: 25px;
+}
+
+textarea {
+    font-size: 25px;
+    margin-top: 10px;
+    height: 200px;
+    border-radius: 6px;
+}

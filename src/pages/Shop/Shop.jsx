@@ -1,6 +1,6 @@
-import "./Projects.module.css"
+import "./Shop.module.css";
 
-function Projects() {
+function Shop() {
     return (
         <div className="home">
             <h1>Welcome to LoreVale Studios</h1>
@@ -9,4 +9,4 @@ function Projects() {
     )
 }
 
-export default Projects;
+export default Shop;
