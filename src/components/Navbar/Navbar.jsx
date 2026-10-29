@@ -7,7 +7,7 @@ const announcements = [
         {title: "Discover Stories"},
         {title: "Explore New Worlds"},
         {title: "Create Something Wonderful"},
-    ];
+];
 
 function Navbar() {
 
