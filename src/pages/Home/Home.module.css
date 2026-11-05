@@ -4,20 +4,23 @@ h1 {
     font-size: 80px;
 }
 
-.hero {
-    background-color: #252338;
-    color: white;
+
+
+img {
+  height: 39px;
+  width: 12px;
 }
 
 .bookslide {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  padding: 3rem;
+  gap: 1rem;
+  padding: 1rem;
   background: var(--surface);
   color: var(--bg);
   border-radius: 1rem;
   width: 500px;
+  height: fixed;
 }
 
 .bookcover {
@@ -161,8 +164,7 @@ h2 {
     gap: 1rem;
 
     padding: 1rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 30px 24px;
 
     border: 3px solid #171624;
 

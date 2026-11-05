@@ -29,6 +29,8 @@ const featured = [
     },
 ];
 
+
+
 function SlideBar() {
     const [activeBook, setActiveBook] = useState(0);
 

@@ -9,6 +9,21 @@ const announcements = [
         {title: "Create Something Wonderful"},
 ];
 
+const authors =[
+    { name: "Author One",
+        slug: "author-one",
+        category: "fantasy"
+    },
+    { name: "Author Two",
+        slug: "author-two",
+        category: "romance"
+    },
+    { name: "Author Three",
+        slug: "author-three",
+        category: "Fantasy"
+    }
+]
+
 function Navbar() {
 
     const [activeSlide, setActiveSlide] = useState(0);
@@ -42,16 +57,31 @@ return (
 
         <div className={styles.navContent}>
             <div className={styles.buttons}>
-                {links.map((link) => (
-                    <Link
-                        key={link.name}
-                        to={link.path}
-                        className={styles.button}
-                    >
-                        {link.name}
-                    </Link>
-                ))}
-            </div>
+    {links.map((link) => (
+        <div key={link.name} className={styles.navItem}>
+            <Link
+                to={link.path}
+                className={styles.button}
+            >
+                {link.name}
+            </Link>
+
+            {link.name === "Authors" && (
+                <div className={styles.dropdown}>
+                    {authors.map((author) => (
+                        <Link
+                            key={author.slug}
+                            to={`/authors/${author.slug}`}
+                            className={styles.dropdownLink}
+                        >
+                            {author.name}
+                        </Link>
+                    ))}
+                </div>
+            )}
+        </div>
+    ))}
+</div>
 
             <div
                 className={styles.hero}

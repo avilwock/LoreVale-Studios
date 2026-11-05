@@ -1,10 +1,22 @@
-import "./Shop.module.css";
+import styles from "./Shop.module.css"
+import products from "../../data/products";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 function Shop() {
+
+
     return (
-        <div className="home">
-            <h1>Welcome to LoreVale Studios</h1>
-            <p>Stories, worlds, and creative works.</p>
+        <div className={styles.shop}>
+            <h1>The LoreVale Shop</h1>
+
+            <div className={styles.productSection}>
+                {products.map((product) => (
+                    <ProductCard
+                    key={product.id}
+                    product={product}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
