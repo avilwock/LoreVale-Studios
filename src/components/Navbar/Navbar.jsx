@@ -33,7 +33,8 @@ function Navbar() {
         {name: "Authors", path: "/authors"},
         {name: "Shop", path: "/shop"},
         {name: "About", path: "/about"},
-        {name: "Contacts", path: "/contact"}
+        {name: "Contacts", path: "/contact"},
+        {name: "Calendar", path: "/calendar"}
     ];
 
     
