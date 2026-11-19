@@ -1,12 +1,20 @@
+import authors from "../../data/author";
+import { Link } from "react-router-dom";
 import "./Authors.module.css"
 
 function Authors() {
     return (
         <div className="home">
             <h1>Meet Our Authors</h1>
-            <h2>Joe Bob</h2>
-            <img src="src/assets/placeholder.jpeg"></img>
-            <p>A new science fiction author, ready to invite readers to his world</p>
+            {authors.map((author) => (
+                <div key = {author.slug}>
+                    <h2>{author.name}</h2>
+                    <p> {author.category}</p>
+
+                    <Link to={`/author/${author.slug}`}>
+                    View Profile</Link>
+                </div>
+            ))}
         </div>
     )
 }

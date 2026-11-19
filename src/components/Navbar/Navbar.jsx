@@ -2,27 +2,13 @@ import styles from './Navbar.module.css'
 import LoreValeMark from '../LoreValeMark/LoreValeMark'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import authors from "../../data/author";
 
 const announcements = [
         {title: "Discover Stories"},
         {title: "Explore New Worlds"},
         {title: "Create Something Wonderful"},
 ];
-
-const authors =[
-    { name: "Author One",
-        slug: "author-one",
-        category: "fantasy"
-    },
-    { name: "Author Two",
-        slug: "author-two",
-        category: "romance"
-    },
-    { name: "Author Three",
-        slug: "author-three",
-        category: "Fantasy"
-    }
-]
 
 function Navbar() {
 
@@ -33,7 +19,7 @@ function Navbar() {
         {name: "Authors", path: "/authors"},
         {name: "Shop", path: "/shop"},
         {name: "About", path: "/about"},
-        {name: "Contacts", path: "/contact"},
+        {name: "Contact Us", path: "/contact"},
         {name: "Calendar", path: "/calendar"}
     ];
 
