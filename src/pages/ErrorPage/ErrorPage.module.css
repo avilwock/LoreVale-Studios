@@ -1,0 +1,17 @@
+.errorContainer {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.errorContent {
+    max-width: 600px;
+}
+
+.errorButton {
+    display: inline-block;
+    padding: 12px 28px;
+    text-decoration: none;
+}
