@@ -11,7 +11,7 @@ function Authors() {
                     <h2>{author.name}</h2>
                     <p> {author.category}</p>
 
-                    <Link to={`/author/${author.slug}`}>
+                    <Link to={`/authors/${author.slug}`}>
                     View Profile</Link>
                 </div>
             ))}
