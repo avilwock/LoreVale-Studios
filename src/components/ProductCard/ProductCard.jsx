@@ -1,6 +1,10 @@
 import styles from "./ProductCard.module.css"
+import {useCart} from "../../context/useCart/useCart"
 
 function ProductCard({ product }) {
+
+    const { addToCart } = useCart();
+
     return (
         <div className={styles.productcard}>
             <div className={styles.productVisual}>
@@ -15,8 +19,16 @@ function ProductCard({ product }) {
             <p className={styles.description}>
                 {product.description}
             </p>
+            <div>       
+                <p className={styles.price}>
+                    ${product.price.toFixed(2)}
+                </p>
+            
 
-            <p className={styles.price}>{product.price}</p>
+                <button className={styles.addbutton} onClick={() => addToCart(product)}>
+                Add to Cart
+                </button>
+            </div>
         </div>
     );
 }

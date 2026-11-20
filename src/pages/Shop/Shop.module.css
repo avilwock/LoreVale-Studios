@@ -42,3 +42,7 @@ h1 {
     color: var(--primary);
     font-weight: bold;
 }
+
+.description {
+    height: 600px;
+}

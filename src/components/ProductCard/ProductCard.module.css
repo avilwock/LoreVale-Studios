@@ -19,7 +19,7 @@
 
 .image {
     width: 12rem;
-    height: 16rem;
+    height: 10rem;
     object-fit: cover;
     border: 1px solid black;
     border-radius: 8px;
@@ -32,10 +32,20 @@
 .description {
     border: 3px double black;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 10px;
+    height: 20rem;
 }
 
 .price {
     justify-self: end;
     font-weight: bold;
+}
+
+.addbutton {
+    font-size: 25px;
+    width: 100%;
+}
+
+button { 
+    width: 100px;
 }

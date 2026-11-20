@@ -10,9 +10,11 @@ import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Calendar from "./pages/Calendar/Calendar";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import{CartProvider} from "./context/CartContext/CartContext";
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
       <Navbar />
 
@@ -33,6 +35,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 
