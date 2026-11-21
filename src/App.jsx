@@ -11,6 +11,8 @@ import Footer from "./components/Footer/Footer";
 import Calendar from "./pages/Calendar/Calendar";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import{CartProvider} from "./context/CartContext/CartContext";
+import FeaturedBooks from "./pages/FeaturedBooks/FeaturedBooks";
+import BookDetails from "./pages/BookDetails/BookDetails";
 import Cart from "./pages/Cart/Cart";
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/authors" element={<Authors />} />
             <Route path="/authors/:authorId" element ={<AuthorPage />} />
+            <Route path="/featuredbooks" element={<FeaturedBooks />} />
+            <Route path="/books/:bookId" element={<BookDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/calendar" element={<Calendar />} />

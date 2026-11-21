@@ -1,33 +1,9 @@
 
 import styles from "./Home.module.css";
 import { useEffect, useState } from "react";
+import featured from "../../data/featured";
+import { Link } from "react-router-dom";
 
-const featured = [
-    {
-        title: "Discover Stories",
-        genre: "DARK FANTASY",
-        tagline: "A compelling tagline about the story goes here.",
-        author: "Author Name",
-        cover: "src/assets/placeholder.jpeg",
-        link: "#",
-    },
-    {
-        title: "Explore New Worlds",
-        genre: "FANTASY",
-        tagline: "Step into a world filled with wonder and mystery.",
-        author: "Author Name",
-        cover: "src/assets/placeholder.jpeg",
-        link: "#",
-    },
-    {
-        title: "Create Something Wonderful",
-        genre: "FICTION",
-        tagline: "Discover a story waiting to be told.",
-        author: "Author Name",
-        cover: "src/assets/placeholder.jpeg",
-        link: "#",
-    },
-];
 
 
 
@@ -47,6 +23,13 @@ function SlideBar() {
     return (
         <div className={styles.hero}>
           <h2>Featured Releases</h2>
+            <Link
+                to={`/featuredbooks`}
+                className={styles.booklink}
+            >
+                Featured Books
+            </Link>
+           
             <section className={styles.bookslide}>
                 <div className={styles.bookcover}>
                     <img
@@ -54,6 +37,7 @@ function SlideBar() {
                         alt="Featured book cover"
                     />
                 </div>
+               
 
                 <div className={styles.bookinfo}>
                     <p className={styles.genre}>
@@ -72,12 +56,12 @@ function SlideBar() {
                         By {featured[activeBook].author}
                     </p>
 
-                    <a
-                        href={featured[activeBook].link}
+                    <Link
+                        to={`/books/${featured[activeBook].id}`}
                         className={styles.booklink}
-                    >
-                        Discover Book
-                    </a>
+                        >
+                            Discover Book
+                        </Link>
                 </div>
             </section>
 
