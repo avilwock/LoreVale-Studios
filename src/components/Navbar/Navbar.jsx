@@ -3,6 +3,9 @@ import LoreValeMark from '../LoreValeMark/LoreValeMark'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import authors from "../../data/author";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import  { useCart } from "../../context/useCart/useCart";
 
 const announcements = [
         {title: "Discover Stories"},
@@ -13,6 +16,12 @@ const announcements = [
 function Navbar() {
 
     const [activeSlide, setActiveSlide] = useState(0);
+    const {cart } = useCart();
+
+    const cartCount=cart.reduce(
+        (total, item) => total + item.quantity,
+        0
+    );
     
     const links = [
         {name: "Home", path: "/"},
@@ -69,8 +78,18 @@ return (
         </div>
     ))}
 </div>
+    <div className={styles.cart}>
+    <Link to="/cart" className={styles.cartLink} aria-label={`Shopping cart, ${cartCount} items`}>
+        <FontAwesomeIcon icon={faCartShopping} />
 
-            <div
+        {cartCount > 0 && (
+            <span className={styles.cartCount}>
+                {cartCount}
+            </span>
+        )}
+    </Link>
+</div>
+            <div            
                 className={styles.hero}
                 aria-label="LoreVale announcements"
             >
@@ -98,6 +117,7 @@ return (
                     ))}
                 </div>
             </div>
+            
         </div>
     </nav>
 );

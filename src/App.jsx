@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import Calendar from "./pages/Calendar/Calendar";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import{CartProvider} from "./context/CartContext/CartContext";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/authors" element={<Authors />} />
             <Route path="/authors/:authorId" element ={<AuthorPage />} />
             <Route path="/about" element={<About />} />
